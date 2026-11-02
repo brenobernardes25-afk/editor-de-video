@@ -8,3 +8,6 @@ PARA-O-VENDEDOR.txt
 # Python
 __pycache__/
 *.pyc
+
+# Arquivos montados para o Release do GitHub
+_release/
