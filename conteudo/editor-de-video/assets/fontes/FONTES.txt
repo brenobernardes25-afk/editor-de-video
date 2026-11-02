@@ -1,0 +1,14 @@
+Fontes incluídas — todas sob a SIL Open Font License 1.1 (texto completo em OFL.txt).
+
+- Inter e Inter Display (Inter-Medium/SemiBold/Bold, InterDisplay-Medium/SemiBold/Bold/ExtraBold/Black/BlackItalic)
+  Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter). Subconjunto latino, sem hinting.
+- Mona Sans (MonaSansSemiExpanded-Bold/ExtraBold/Black, MonaSansExpanded-Bold/Black, MonaSansCondensed-ExtraBold/Black)
+  Copyright (c) 2023, GitHub (https://github.com/github/mona-sans), with Reserved Font Name "Mona Sans".
+  Arquivos originais da versão 2.0, sem modificação.
+- Lora (Lora-Variable.ttf, Lora-Italic-Variable.ttf)
+  Copyright 2011 The Lora Project Authors (https://github.com/cyrealtype/Lora-Cyrillic), with Reserved Font Name "Lora".
+  Arquivos variáveis originais, sem modificação (o peso é escolhido na hora de desenhar).
+- JetBrains Mono (JetBrainsMono-Medium/Bold)
+  Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono). Subconjunto latino.
+
+Modelo de detecção de rosto: YuNet (face_detection_yunet_2023mar.onnx), OpenCV Zoo — licença MIT.

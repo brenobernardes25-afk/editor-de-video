@@ -1,0 +1,10 @@
+# Arquivos grandes: passam do limite de 100 MB do GitHub e podem ser gerados de novo
+*.zip
+*.npz
+
+# Anotações do vendedor
+PARA-O-VENDEDOR.txt
+
+# Python
+__pycache__/
+*.pyc

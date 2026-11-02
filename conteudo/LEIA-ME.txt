@@ -1,0 +1,218 @@
+==============================================================================
+  EDITOR DE VÍDEO COM IA — Manual de instalação e uso
+  Versão 2.0 · funciona no Claude e no ChatGPT
+==============================================================================
+
+Você manda o vídeo bruto, pede a edição em português e recebe o MP4 pronto:
+cortes nos silêncios, legendas sincronizadas palavra por palavra, 36 efeitos
+e 11 estilos de acabamento. A IA transcreve a fala, monta a edição e o motor
+incluído renderiza o vídeo dentro do próprio Claude ou ChatGPT.
+
+
+------------------------------------------------------------------------------
+  1. O QUE VEM NO PACOTE
+------------------------------------------------------------------------------
+
+  editor-de-video.zip     A skill completa (motor, fontes, instruções).
+                          É o arquivo principal: vai no Claude e no ChatGPT.
+                          NÃO descompacte — envie o .zip como está.
+
+  INSTRUCOES_GPT.txt      Texto para colar nas instruções do seu GPT
+                          (só para quem usa ChatGPT).
+
+  whisper-small-pt.npz    Modelo de transcrição da fala (legendas).
+                          Necessário no ChatGPT. No Claude é opcional.
+
+  LEIA-ME.txt             Este manual.
+
+
+------------------------------------------------------------------------------
+  2. O QUE VOCÊ PRECISA
+------------------------------------------------------------------------------
+
+  • Claude: um plano pago que permita skills e execução de código
+    (ex.: Pro ou Max).
+  • ChatGPT: plano Plus ou Pro (para criar um GPT personalizado).
+  • Um vídeo seu, de preferência falando para a câmera. Funciona com vídeo
+    vertical ou horizontal (ele converte para 9:16 seguindo o rosto).
+
+  Você pode instalar só em um dos dois, ou nos dois.
+
+
+------------------------------------------------------------------------------
+  3. INSTALAR NO CLAUDE (claude.ai ou app)
+------------------------------------------------------------------------------
+
+  1) Abra Configurações → Capacidades (Capabilities) e ligue a
+     "Execução de código e criação de arquivos".
+  2) Ainda nas Configurações, procure a seção Skills e clique em enviar /
+     adicionar skill. Escolha o arquivo  editor-de-video.zip  e confirme.
+  3) Confira se a skill "editor-de-video" aparece ligada na lista.
+  4) Abra uma conversa nova, anexe o vídeo e peça a edição (veja a seção 5).
+
+  Legendas no Claude: na primeira edição de cada conversa a IA baixa o
+  modelo de transcrição sozinha (alguns minutos). Para isso a execução de
+  código precisa de acesso à internet — se nas Configurações houver opção de
+  acesso à rede, deixe liberado (ou inclua github.com). Sem acesso, o vídeo
+  sai editado, mas sem legendas automáticas; nesse caso mande o roteiro do
+  vídeo na conversa e peça "usa este texto nas legendas".
+
+  Para atualizar: envie o editor-de-video.zip novo no lugar do antigo.
+
+  (Avançado) No app Claude Code, no seu próprio computador, também funciona,
+  desde que o computador tenha Python 3 e ffmpeg instalados.
+
+
+------------------------------------------------------------------------------
+  4. INSTALAR NO CHATGPT (Plus ou Pro)
+------------------------------------------------------------------------------
+
+  1) No ChatGPT, abra  Explorar GPTs → + Criar → aba Configurar.
+  2) Nome: "Editor de Vídeo" (ou o que preferir).
+  3) Instruções: abra o arquivo INSTRUCOES_GPT.txt, copie TUDO e cole.
+  4) Conhecimento: envie os dois arquivos:
+        editor-de-video.zip
+        whisper-small-pt.npz
+     Se o ChatGPT recusar o .npz, renomeie para  whisper-small-pt.zip  e
+     envie de novo (funciona igual).
+  5) Capacidades: marque "Interpretador de código e análise de dados".
+     As outras podem ficar desligadas.
+  6) Clique em Criar/Salvar e escolha "Somente eu".
+  7) Abra o GPT, envie o vídeo e peça a edição.
+
+  Para atualizar: em Conhecimento, apague o editor-de-video.zip antigo e
+  envie o novo.
+
+  Se o GPT disser que não achou o motor: envie o editor-de-video.zip direto
+  na conversa, junto com o vídeo.
+
+
+------------------------------------------------------------------------------
+  5. COMO PEDIR A EDIÇÃO
+------------------------------------------------------------------------------
+
+  Escreva do jeito que você falaria com um editor. Exemplos:
+
+  • "Edita esse vídeo pra Reels: corta os silêncios e coloca legenda
+     destacando as palavras-chave."
+
+  • "Estilo Hormozi, legenda grande em caixa alta, zoom nas frases fortes
+     e no final um CTA pra seguir @meuperfil."
+
+  • "Deixa profissional, cor cinematográfica, meu nome e cargo no começo:
+     Ana Souza, nutricionista."
+
+  • "Quando eu falar do antes e depois, faz uma tela dividida. Quando eu
+     falar do preço, risca R$ 497 e mostra R$ 297."
+
+  A IA mostra uma prévia (quadros do vídeo) antes de renderizar. Depois de
+  pronto, peça ajustes normalmente: "tira o zoom", "legenda maior",
+  "troca a cor de destaque para azul", "corta os primeiros 3 segundos".
+
+  Se tiver mídias extras (b-roll, prints, logo, música), mande junto com o
+  vídeo e diga onde usar. Música só a que você enviar.
+
+
+------------------------------------------------------------------------------
+  6. ESTILOS E EFEITOS
+------------------------------------------------------------------------------
+
+  Estilos (peça pelo nome ou pelo clima):
+    pro (padrão) · minimal · impacto (Hormozi) · clean (tutorial) ·
+    cinema · tech · neon · noticia · elegante · terroso · dinheiro
+
+  Efeitos (peça pelo nome ou descrevendo):
+    carrossel · texto vazado/recortado · tela dividida · barra de prompt ·
+    deck de cenas · elemento riscado · antes e depois · color grade ·
+    cupom de desconto · galeria de vídeos · checklist · órbita de vídeos ·
+    afasta e revela · diminui e explica · motion de papel (print/notícia) ·
+    CTA (seguir, comentar, link na bio) · legendas animadas (7 estilos) ·
+    título animado · zoom/punch-in · b-roll · picture-in-picture ·
+    imagem/logo/marca d'água · lista numerada · etapas 1-2-3 · contador ·
+    nome e cargo · círculo/seta/sublinhado · notificação · conversa em
+    bolhas · barra de progresso · tremor · flash · glitch · vinheta ·
+    vazamento de luz · desfoque de fundo
+
+  Formatos: 9:16 (Reels/TikTok/Shorts, padrão), 16:9, 1:1 e 4:5.
+  Áudio: limpeza de voz, redução de chiado, volume padrão das redes,
+  música com abaixamento automático durante a fala, efeitos sonoros.
+
+
+------------------------------------------------------------------------------
+  7. DICAS PARA O MELHOR RESULTADO
+------------------------------------------------------------------------------
+
+  • Vídeos de até 1–2 minutos editam mais rápido. Para vídeos longos, peça
+    primeiro "renderiza só um trecho de 10 segundos pra eu ver o estilo".
+  • Fale nomes próprios e marcas com clareza, ou avise antes:
+    "no vídeo eu falo Hotmart, Kiwify e CapCut" — melhora a legenda.
+  • Se a legenda errar uma palavra, diga: "troca 'cloud' por 'Claude'".
+  • Um estilo e uma cor de destaque por vídeo costumam ficar melhor do que
+    muitos efeitos ao mesmo tempo.
+
+
+------------------------------------------------------------------------------
+  8. PROBLEMAS COMUNS
+------------------------------------------------------------------------------
+
+  "A IA não usou a skill / editou de outro jeito"
+     Comece o pedido com "Usa a skill editor-de-video para editar...".
+     No ChatGPT, confira se está dentro do seu GPT, não no chat comum.
+
+  "Está demorando / parou no meio"
+     É normal: o render roda em partes. Se parar, escreva "continua".
+     Um vídeo de 1 minuto leva de 1 a 3 minutos para renderizar
+     (no ChatGPT pode levar mais, porque ele trabalha em etapas curtas).
+
+  "Saiu sem legenda"
+     No ChatGPT, confira se o whisper-small-pt.npz está em Conhecimento.
+     No Claude, veja a nota sobre acesso à internet na seção 3, ou mande o
+     roteiro do vídeo.
+
+  "O texto ficou em cima do meu rosto"
+     Peça: "move o título para o topo" ou "tira esse cartão de cima do
+     rosto". A IA confere a prévia, mas você pode pedir ajustes à vontade.
+
+  "Emoji não apareceu no texto"
+     Depende da plataforma ter fonte de emoji; quando não tem, o emoji é
+     removido do texto.
+
+
+------------------------------------------------------------------------------
+  9. O QUE ELE NÃO FAZ
+------------------------------------------------------------------------------
+
+  • Não recorta a pessoa do fundo (sem texto atrás de você, sem trocar
+    o fundo).
+  • Não busca músicas, imagens ou vídeos na internet: envie o que quiser
+    usar.
+  • A transcrição pode errar nomes próprios — revise e peça correção.
+  • Depende dos recursos do Claude e do ChatGPT. Se uma plataforma mudar
+    algo, pode ser preciso baixar uma versão atualizada deste pacote.
+
+
+------------------------------------------------------------------------------
+  10. LICENÇAS E CRÉDITOS
+------------------------------------------------------------------------------
+
+  Fontes Inter, Mona Sans, Lora e JetBrains Mono: SIL Open Font License 1.1
+  (texto completo em editor-de-video.zip → assets/fontes/OFL.txt).
+  Transcrição: modelo Whisper (OpenAI, licença MIT), convertido a partir da
+  exportação do projeto sherpa-onnx (Apache-2.0). Detecção de rosto: YuNet
+  (OpenCV Zoo, licença MIT). Detalhes em editor-de-video.zip → CREDITOS.md.
+
+  Este produto é independente e não é afiliado, patrocinado nem endossado
+  pela Anthropic (Claude) ou pela OpenAI (ChatGPT). Os nomes são citados
+  apenas para indicar compatibilidade.
+
+  Licença de uso: você pode usar este pacote, de forma pessoal e comercial,
+  para editar os seus próprios vídeos. É proibido revender, compartilhar ou
+  distribuir os arquivos deste pacote.
+
+
+------------------------------------------------------------------------------
+  SUPORTE
+------------------------------------------------------------------------------
+
+  Dúvidas ou problemas: fale com o vendedor pelo contato informado na
+  plataforma onde você fez a compra.
